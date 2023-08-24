@@ -22,10 +22,11 @@ Welcome to the Albasoft E-Commerce project! This is a basic e-commerce applicati
 2. Navigate to the project folder: `cd Challange`
 3. Install composer dependencies: `composer install`
 4. Copy the `.env.example` file to `.env` and configure your database settings.
-5. Run database migrations: `php artisan migrate`
-6. Run database seeding: `php artisan db:seed --class=DatabaseSeeder`
-7. Run the command for image uploading: `php artisan storage:link`
-8. Start the development server: `php artisan serve`
+5. Generate the application key: `php artisan key:generate`
+6. Run database migrations: `php artisan migrate`
+7. Run database seeding: `php artisan db:seed --class=DatabaseSeeder`
+8. Run the command for image uploading: `php artisan storage:link`
+9. Start the development server: `php artisan serve`
 
 ## Usage
 
