@@ -27,6 +27,8 @@ Welcome to the Albasoft E-Commerce project! This is a basic e-commerce applicati
 7. Run database seeding: `php artisan db:seed --class=DatabaseSeeder`
 8. Run the command for image uploading: `php artisan storage:link`
 9. Start the development server: `php artisan serve`
+10. Example admin login email:"challangeAdmin@example.com" password:"password"
+11. Example user login email:"challangeUser@example.com" password:"password"
 
 ## Usage
 
