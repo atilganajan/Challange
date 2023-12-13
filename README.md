@@ -1,4 +1,4 @@
-# Albasoft E-Commerce Project
+# E-Commerce Project
 
 Welcome to the Albasoft E-Commerce project! This is a basic e-commerce application developed using Laravel, PHP v8.2, MySQL for the database, and Laravel Blade templates for the frontend.
 
