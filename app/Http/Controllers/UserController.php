@@ -13,6 +13,10 @@ class UserController
 {
     protected UserRepository $users;
 
+    public function __construct(User $users){
+        $this->users = $users;
+    }
+
     public function register(){
         return view("authentication.register");
     }
