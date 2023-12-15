@@ -13,7 +13,7 @@ class UserController
 {
     protected UserRepository $users;
 
-    public function __construct(User $users){
+    public function __construct(UserRepository $users){
         $this->users = $users;
     }
 
