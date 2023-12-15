@@ -11,33 +11,22 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-
-
-        DB::table('roles')->insert([
-            ['id' => 2, 'role' => 'üye'],
-            ['id' => 1, 'role' => 'yönetici'],
-        ]);
-
         User::factory()->create([
             'name' => 'Ahmet',
             'surname'=>'Atılgan(Customer)',
             'email' => 'challangeUser@example.com',
-            'password' => Hash::make('password'),
-            'role_id' =>2
+            'password' => 'password',
         ]);
 
         User::factory()->create([
             'name' => 'Ahmet',
             'surname'=>'Atılgan(Admin)',
             'email' => 'challangeAdmin@example.com',
-            'password' => Hash::make('password'),
-            'role_id' =>1
+            'password' =>'password',
+            'role' =>"admin"
         ]);
 
-        User::factory(20)->create([
-            'password' => Hash::make('password'),
-
-        ]);
+        User::factory(20)->create();
 
         Category::factory(10)->create();
 

@@ -23,8 +23,17 @@ class User extends Authenticatable
         'email',
         'password',
         'phone',
-        'role_id',
+        'role',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($user) {
+            $user->password = bcrypt($user->password);
+        });
+    }
 
 
     public function cartItemProducts()

@@ -4,26 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginUserRequest;
 use App\Models\User;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateUserRequest;
 use Illuminate\Support\Facades\Auth;
 
 class UserController
 {
+    protected UserRepository $users;
+
     public function register(){
         return view("authentication.register");
     }
 
     public function store(CreateUserRequest $request){
-        $hashedPassword = bcrypt($request->password);
 
-        $user = User::create([
-            'name' => $request->name,
-            'surname' => $request->surname,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'password' => $hashedPassword,
-        ]);
+        $this->users->create($request->only('name', 'surname', 'email', 'phone', 'password'));
 
         return redirect('/login')->with('success', 'User registered successfully');
     }
